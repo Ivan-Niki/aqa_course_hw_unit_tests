@@ -87,4 +87,4 @@ let num = 7;
 let n = String(num);
 let nn = n + n;
 let nnn = n + n + n;
-console.log(n + nn + nnn); // выведет в консоль "777777"
+console.log(+n + +nn + +nnn); // выведет в консоль 861 (number)
