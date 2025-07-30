@@ -7,9 +7,6 @@
 
 */
 
-// РЕШЕНИЕ: в задании 3 прописать следующую инструкцию: 
-// 
-
 // 1. Создать переменную "minAge" и присвоить ей значение 18.
 let minAge = 18;
 
@@ -27,12 +24,20 @@ age = '10';
 // age = '61';
 console.log(age, typeof age);
 
-// РЕШЕНИЕ ТЕКУЩЕГО ЗАДАНИЯ (task-3):
-if (typeof (age) === "string") {
-  age = Number(age);
-};
+// ВАРИАНТ 1 - РЕШЕНИЕ ТЕКУЩЕГО ЗАДАНИЯ (task-3) :
+// if (typeof (age) === "string") {
+//   age = Number(age);
+// };
 
-console.log(age, typeof age);
+// console.log(age, typeof age);
+
+// ВАРИАНТ 2 - РЕШЕНИЕ ТЕКУЩЕГО ЗАДАНИЯ (task-3) :
+if (isNaN(age)) {
+  console.log("Incorrect data type");
+} else if (typeof (age) === "string") {
+  age = Number(age);
+}
+
 
 /* 5. Создать if в котором будете проверять весь код переменной age со следующими условиями:
 - Если age меньше чем minAge, вывести в консоль "You don't have access cause your age is " + "age" + " It's less then";

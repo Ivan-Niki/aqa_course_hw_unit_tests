@@ -33,9 +33,11 @@ age = 17;
 // age = 61;
 
 // 4. Добавьте проверку: если тип данных в переменной age не number - вывести в консоль Incorrect data type.
-if (typeof age != Number) {
+if (typeof age != "number") {
   console.log("Incorrect data type");
 }
+
+// console.log(typeof age);
 
 /* 5. Создать if в котором будете проверять весь код переменной age со следующими условиями:
 - Если age меньше чем minAge, вывести в консоль "You don't have access cause your age is " + "age" + " It's less then";
