@@ -8,8 +8,24 @@
 
 */
 
-function digitalRoot(number) {
+function digitalRoot(num) {
   // Ваш код
+  // Суммирование:
+  let numString = num.toString();
+  let result = 0;
+  if (numString.length === 0) {
+    return +numString;
+  } else {
+    result += +numString[0] + digitalRoot(numString.slice(1))
+  }
+
+  // Возврат (return) в зависимости от длины получившегося числа (которое лежит в строке result)
+  if (result.toString().length === 1) {
+    return result
+  } else {
+    return digitalRoot(result)
+  }
 }
 
+// console.log(digitalRoot(8976856784));
 export { digitalRoot };
