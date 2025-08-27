@@ -19,8 +19,42 @@ function getRandomArbitrary(min, max) {
   return Math.random() * (max - min) + min;
 }
 
+// console.log(Math.round(getRandomArbitrary(0, 10)))
+
 function uniqueRandomGenerator(n) {
   // Ваш код
+  let numbers = [];
+  for (let i = 1; i <= n; i++) {
+    numbers.push(i)
+  }
+  let callCount = 0;
+  // let usedNumbers = [];
+  console.log(numbers);
+
+  return function f1() {
+    callCount++
+    // console.log(callCount);
+    if (callCount > n) {
+      return 'All numbers were received';
+    }
+    let randomIndex = Math.ceil(getRandomArbitrary(0, numbers.length - 1));
+    let randomNumber = numbers[randomIndex];
+
+    numbers.splice(randomIndex, 1);
+    // console.log(randomNumber);
+    // console.log(callCount);
+    return randomNumber;
+  }
 }
+const generator = uniqueRandomGenerator(5);
+
+console.log(generator())
+console.log(generator())
+console.log(generator())
+console.log(generator())
+console.log(generator())
+console.log(generator())
+
+
 
 export { uniqueRandomGenerator };
