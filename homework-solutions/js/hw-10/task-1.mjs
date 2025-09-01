@@ -26,19 +26,15 @@ let qa = {
 let anotherQa = {
   name: 'John',
   age: 32,
-  salary: 1800,
-  getInfo(greetingsWord) {
-    return `${greetingsWord}, my name is ${this.name}, I'm ${this.age} and my salary is ${this.salary}`
-  }
-};
-qa.getInfo.bind(anotherQa)();
-qa.getInfo.call(anotherQa);
-qa.getInfo.apply(anotherQa);
+  salary: 1800
+}
+
 
 // const fnAnotherQaInfo = qa.getInfo.bind(anotherQa);
 // console.log(qa.getInfo.bind(anotherQa)());
 // console.log(qa.getInfo.call(anotherQa));
 // console.log(qa.getInfo.apply(anotherQa));
+
 
 // Используйте bind с greetingWord "Hello"
 let bindResult = qa.getInfo.bind(anotherQa)('Hello');
