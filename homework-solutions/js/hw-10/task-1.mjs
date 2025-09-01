@@ -29,11 +29,9 @@ let anotherQa = {
   salary: 1800
 }
 
-
-// const fnAnotherQaInfo = qa.getInfo.bind(anotherQa);
-// console.log(qa.getInfo.bind(anotherQa)());
-// console.log(qa.getInfo.call(anotherQa));
-// console.log(qa.getInfo.apply(anotherQa));
+console.log(qa.getInfo.bind(anotherQa)('Hello from bind'));
+console.log(qa.getInfo.call(anotherQa, 'Hello from call'));
+console.log(qa.getInfo.apply(anotherQa, ['Hello from apply']));
 
 
 // Используйте bind с greetingWord "Hello"
