@@ -89,8 +89,8 @@ const product: DiscountedProduct = {
 console.log(calculateDiscount(product)); // Ожидается: 900
 */
 
-function calculateDiscount(prod: DiscountedProduct): number {
-    return product.price - (prod.price * prod.discount/100)
+function calculateDiscount(product: DiscountedProduct): number {
+    return product.price - (product.price * product.discount/100)
 }
 
 const product: DiscountedProduct = {
