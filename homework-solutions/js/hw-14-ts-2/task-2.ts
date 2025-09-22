@@ -11,7 +11,7 @@ map([1, 2, 3, 4, 5], callback) => [0, 2, 6, 12, 20]
 
 type MapCallback<T, U> = (elem: T, index: number, array: T[]) => U;
 
-function CustomMap<T, U>(array: T[], callbackFn: MapCallback<T, U>): U[] {
+function customMap<T, U>(array: T[], callbackFn: MapCallback<T, U>): U[] {
     let resultArr: U[] = [];
     for (let i = 0; i < array.length; i++) {
         resultArr.push(callbackFn(array[i], i, array))
@@ -19,5 +19,5 @@ function CustomMap<T, U>(array: T[], callbackFn: MapCallback<T, U>): U[] {
     return resultArr;
 }
 
-const result = CustomMap([1, 2, 3, 4, 5], (elem, index) => elem * index);
+const result = customMap([1, 2, 3, 4, 5], (elem, index) => elem * index);
 console.log(result);
