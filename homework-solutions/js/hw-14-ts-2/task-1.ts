@@ -15,14 +15,16 @@ console.log(stringArray);
 /*
 2. Создайте дженерик функцию getLastElement, которая принимает массив элементов типа T, и возвращает последний элемент(типа T).  */
 
-function getLastItem<T>(array: T[]): T {
+function getLastItem<T>(arr: T[]): T | undefined {
     // ваш код здесь
-    return array[array.length - 1];
+    if (Array.isArray(arr) && arr.length > 0) {
+        return arr[arr.length - 1];
+    }
 }
 
 console.log(getLastItem([1, 2, 3, 4])); // 4
 console.log(getLastItem(['a', 'b', 'c'])); // 'c'
-
+console.log(getLastItem([]));
 
 
 /*
